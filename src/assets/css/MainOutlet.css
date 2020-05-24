@@ -1,0 +1,26 @@
+.outlet-wrapper {
+  width: 100%;
+  margin-left: 15px;
+}
+
+.nav-container {
+  justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+}
+.nav {
+  padding: 10px;
+  margin: 5px;
+}
+.nav-link {
+  text-decoration: none;
+  color: #3f3f44;
+}
+.actual-navs-container {
+  display: flex;
+}
+.active-nav {
+  font-weight: bold;
+  color: black;
+  text-decoration: underline;
+}

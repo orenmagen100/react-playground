@@ -1,0 +1,9 @@
+body {
+  background-color: #f7f7f7;
+}
+button {
+  background: #fdcb9e;
+  border-radius: 3px;
+  cursor: pointer;
+  color: #3f3f44;
+}

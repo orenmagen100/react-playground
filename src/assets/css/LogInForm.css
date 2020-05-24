@@ -1,0 +1,29 @@
+.login-form {
+  display: flex;
+  flex-direction: column;
+  min-height: 250px;
+  min-width: 200px;
+  align-items: center;
+  justify-content: space-between;
+}
+.submit-button {
+  min-width: 150px;
+  background-color: #fdcb9e;
+  min-height: 30px;
+  color: #3f3f44;
+  margin-top: 20px;
+  font-size: 1rem;
+}
+
+input[type='text'] {
+  display: block;
+  color: #3f3f44;
+  font-size: 1rem;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  min-height: 20px;
+  min-width: 150px;
+}
+label {
+  color: white;
+}

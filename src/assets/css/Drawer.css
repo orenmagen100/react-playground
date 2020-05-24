@@ -1,0 +1,24 @@
+.drawer-container {
+  background-color: #cceabb;
+  height: 100vh;
+  width: 80px;
+  transition: all 0.3s ease-in-out;
+  transform: translate(0);
+  display: flex;
+  flex-direction: column;
+  box-shadow: unset;
+  box-shadow: 5px 8px 18px rgb(0, 0, 0, 0.7);
+}
+
+.drawer-container-is-open {
+  width: 300px;
+  transform: translate(0);
+}
+
+.drawer-content {
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  margin-top: 20px;
+}

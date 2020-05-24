@@ -1,0 +1,9 @@
+.users-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.github-profile {
+  margin: 20px;
+}
