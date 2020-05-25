@@ -15,7 +15,7 @@ function MainOutlet() {
       <NavigationBar />
       <hr />
       <Switch>
-        <Route exact path='/' component={Home} />
+        <Route exact path='/' component={Home}  />
         <Route path='/users' component={Users} />
         <Route path='/user/:id' component={UserManagePage} />
         <PrivateRoute path='/admin' component={Admin} />

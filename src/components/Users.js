@@ -17,6 +17,7 @@ function Users() {
   };
   const addNewProfile = async profileData => {
     setProfiles(() => [...profiles, profileData]);
+
   };
   const handleSubmit = event => {
     event.preventDefault();
