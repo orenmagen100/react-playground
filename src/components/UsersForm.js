@@ -1,44 +1,44 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import axios from 'axios';
 import LoadingSpinner from './LoadingSpinner';
 import '../assets/css/UsersForm.css';
 
-class UsersForm extends Component {
-  state = { userName: '', loading: false };
-  handleSubmit = async event => {
+export const UsersForm = props => {
+  const [userName, setUserName] = useState('');
+  const [loading, setLoading] = useState(false);
+  // useEffect(() => {
+  //   document.title = `You clicked ${count} times`;
+  // }, [loading]);
+  const handleSubmit = async event => {
     event.preventDefault();
-    this.setState({ loading: true }, async () => {
-      const resp = await axios.get(
-        `https://api.github.com/users/${this.state.userName}`
-      );
-      this.props.onSubmit(resp.data);
-      this.setState({ userName: '', loading: false });
-    });
+    setLoading(true);
+    const resp = await axios.get(`https://api.github.com/users/${userName}`);
+    props.onSubmit(resp.data);
+    setLoading(false);
+    setUserName('');
   };
-  render() {
-    return (
-      <div className='users-form-container'>
-        <h2 className='fas fa-camera'>GitHub Users</h2>
-        <form onSubmit={this.handleSubmit} className='users-form-wrapper'>
-          <input
-            type='text'
-            value={this.state.userName}
-            onChange={event => this.setState({ userName: event.target.value })}
-            placeholder='GitHub username'
-            required
-          />
+  return (
+    <div className='users-form-container'>
+      <h2 className='fas fa-camera'>GitHub Users</h2>
+      <form onSubmit={handleSubmit} className='users-form-wrapper'>
+        <input
+          type='text'
+          value={userName}
+          onChange={event => setUserName(event.target.value)}
+          placeholder='GitHub username'
+          required
+        />
 
-          {this.state.loading ? (
-            <LoadingSpinner />
-          ) : (
-            <button className={`${this.state.loading} ? 'btn-loading' : '' `}>
-              Add User
-            </button>
-          )}
-        </form>
-      </div>
-    );
-  }
-}
+        {loading ? (
+          <LoadingSpinner />
+        ) : (
+          <button className={`${loading} ? 'btn-loading' : '' `}>
+            Add User
+          </button>
+        )}
+      </form>
+    </div>
+  );
+};
 
 export default UsersForm;
