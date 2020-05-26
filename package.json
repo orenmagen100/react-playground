@@ -58,9 +58,10 @@
     "webpack-dev-server": "3.2.1"
   },
   "scripts": {
-    "start": "webpack-dev-server --config webpack.config.dev.js --port 8000",
+    "start": "node server.js",
+    "dev": "webpack-dev-server --config webpack.config.dev.js --port 8080",
     "build": "react-scripts build",
-    "heroku-postbuild": "cd react-ui/ && yarn --production=false && yarn build",
+    "heroku-postbuild": "webpack -p",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
