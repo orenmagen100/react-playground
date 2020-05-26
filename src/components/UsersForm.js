@@ -3,7 +3,7 @@ import axios from 'axios';
 import LoadingSpinner from './LoadingSpinner';
 import '../assets/css/UsersForm.css';
 
-export const UsersForm = props => {
+const UsersForm = props => {
   const [userName, setUserName] = useState('');
   const [loading, setLoading] = useState(false);
   // useEffect(() => {

@@ -5,7 +5,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
   entry: './src/index.js',
   output: {
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, '/public/assets/"'),
     filename: 'bundle.js',
     chunkFilename: '[id].js',
     publicPath: ''
@@ -57,10 +57,9 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: __dirname + '/public/index.html',
+      template: __dirname + '/src/index.html',
       filename: 'index.html',
-      inject: 'body',
-      favicon: './public/favicon.ico'
+      inject: 'body'
     })
   ]
 };

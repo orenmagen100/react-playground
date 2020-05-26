@@ -2,7 +2,7 @@ import React from 'react';
 
 import { NavLink } from 'react-router-dom';
 
-function NavigationBar(props) {
+function NavigationBar() {
   return (
     <div className='nav-container'>
       <div className='actual-navs-container'>
