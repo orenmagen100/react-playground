@@ -1,6 +1,6 @@
 .drawer-container {
   background-color: #cceabb;
-  height: 100vh;
+  min-height: 100%;
   width: 80px;
   transition: all 0.3s ease-in-out;
   transform: translate(0);
